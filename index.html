@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Dodongo">
+<link rel="manifest" href="assets/app/manifest.json">
+<link rel="apple-touch-icon" href="assets/app/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/app/icon-192.png">
+<title>Dodongo's Quest</title>
+<link rel="modulepreload" href="src/main.js">
+<link rel="modulepreload" href="src/config.js">
+<link rel="modulepreload" href="src/input.js">
+<link rel="modulepreload" href="src/chars.js">
+<link rel="modulepreload" href="src/sprite3d.js">
+<link rel="modulepreload" href="src/artsets.js">
+<link rel="modulepreload" href="src/showcase.js">
+<link rel="modulepreload" href="src/audio-proxy.js">
+<link rel="modulepreload" href="src/game.js">
+<link rel="modulepreload" href="src/player.js">
+<link rel="modulepreload" href="src/cutscene.js">
+<link rel="modulepreload" href="src/levels.js">
+<link rel="modulepreload" href="src/quests.js">
+<link rel="modulepreload" href="src/mmlevels.js">
+<link rel="modulepreload" href="src/silevels.js">
+<link rel="modulepreload" href="src/simap.js">
+<link rel="modulepreload" href="src/sioffer.js">
+<link rel="modulepreload" href="src/sisecrets.js">
+<link rel="modulepreload" href="src/secrets.js">
+<link rel="modulepreload" href="src/heroes.js">
+<link rel="modulepreload" href="src/save.js">
+<link rel="modulepreload" href="src/story.js">
+<link rel="modulepreload" href="src/hud.js">
+<link rel="modulepreload" href="src/rig.js">
+<link rel="modulepreload" href="src/skyduel.js">
+<link rel="modulepreload" href="src/stages/sky.js">
+<link rel="modulepreload" href="src/canvasmem.js">
+<link rel="modulepreload" href="src/render.js">
+<link rel="modulepreload" href="src/esde.js">
+<link rel="modulepreload" href="src/siveil.js">
+<link rel="modulepreload" href="src/sceneveil.js">
+<link rel="modulepreload" href="src/dawn.js">
+<link rel="modulepreload" href="src/stormride.js">
+<link rel="modulepreload" href="src/audio.js">
+<link rel="modulepreload" href="src/stage.js">
+<link rel="modulepreload" href="src/chars/dodongo3d.js">
+<link rel="modulepreload" href="src/chars/ana3d.js">
+<link rel="modulepreload" href="src/chars/shadow3d.js">
+<link rel="modulepreload" href="src/chars/scarlet3d.js">
+<link rel="modulepreload" href="src/chars/kobold3d.js">
+<link rel="modulepreload" href="src/chars/brute3d.js">
+<link rel="modulepreload" href="src/chars/whelp3d.js">
+<link rel="modulepreload" href="src/chars/grimscale3d.js">
+<link rel="modulepreload" href="src/chars/salamander3d.js">
+<link rel="modulepreload" href="src/chars/magmaw3d.js">
+<link rel="modulepreload" href="src/chars/wyvern3d.js">
+<link rel="modulepreload" href="src/chars/tempest3d.js">
+<link rel="modulepreload" href="src/chars/guard3d.js">
+<link rel="modulepreload" href="src/chars/dragonking3d.js">
+<link rel="modulepreload" href="src/chars/dodongo_dragon3d.js">
+<link rel="modulepreload" href="src/chars/dragonking_dread3d.js">
+<link rel="modulepreload" href="src/artplan.js">
+<link rel="modulepreload" href="src/gl2d.js">
+<link rel="modulepreload" href="src/ktx2.js">
+<link rel="modulepreload" href="src/fx.js">
+<link rel="modulepreload" href="src/spawn.js">
+<link rel="modulepreload" href="src/actors.js">
+<link rel="modulepreload" href="src/interact.js">
+<link rel="modulepreload" href="src/wraith.js">
+<link rel="modulepreload" href="src/heartstone.js">
+<link rel="modulepreload" href="src/mmworld.js">
+<link rel="modulepreload" href="src/siworld.js">
+<link rel="modulepreload" href="src/sifx.js">
+<link rel="modulepreload" href="src/projectiles.js">
+<link rel="modulepreload" href="src/flamestream.js">
+<link rel="modulepreload" href="src/forms.js">
+<link rel="modulepreload" href="src/sienabled.js">
+<link rel="modulepreload" href="src/stages/sistorm.js">
+<link rel="modulepreload" href="src/sistory.js">
+<link rel="modulepreload" href="src/sipalace_layout.js">
+<link rel="modulepreload" href="src/duelsupers.js">
+<link rel="modulepreload" href="src/stages/sikraken.js">
+<link rel="modulepreload" href="src/chars/dodongo.js">
+<link rel="modulepreload" href="src/chars/ana.js">
+<link rel="modulepreload" href="src/chars/shadow.js">
+<link rel="modulepreload" href="src/chars/scarlet.js">
+<link rel="modulepreload" href="src/chars/kobold.js">
+<link rel="modulepreload" href="src/chars/brute.js">
+<link rel="modulepreload" href="src/chars/whelp.js">
+<link rel="modulepreload" href="src/chars/grimscale.js">
+<link rel="modulepreload" href="src/chars/salamander.js">
+<link rel="modulepreload" href="src/chars/magmaw.js">
+<link rel="modulepreload" href="src/chars/wyvern.js">
+<link rel="modulepreload" href="src/chars/tempest.js">
+<link rel="modulepreload" href="src/chars/guard.js">
+<link rel="modulepreload" href="src/chars/dragonking.js">
+<link rel="modulepreload" href="src/chars/dodongo_dragon.js">
+<link rel="modulepreload" href="src/chars/dragonking_dread.js">
+<link rel="modulepreload" href="src/enemies.js">
+<link rel="modulepreload" href="src/enemies2.js">
+<link rel="modulepreload" href="src/minibosses.js">
+<link rel="modulepreload" href="src/mmfoes.js">
+<link rel="modulepreload" href="src/mmbosses.js">
+<link rel="modulepreload" href="src/sifoes.js">
+<link rel="modulepreload" href="src/sifoes2.js">
+<link rel="modulepreload" href="src/sibosses.js">
+<link rel="modulepreload" href="src/sikraken.js">
+<link rel="modulepreload" href="src/sirage.js">
+<link rel="modulepreload" href="src/siswamp.js">
+<link rel="modulepreload" href="src/sicell.js">
+<link rel="modulepreload" href="src/sipalace.js">
+<link rel="modulepreload" href="src/sileviathan.js">
+<link rel="modulepreload" href="src/siprops.js">
+<link rel="modulepreload" href="src/sitele.js">
+<link rel="modulepreload" href="src/galleon.js">
+<link rel="modulepreload" href="src/sistory_plates.js">
+<style>
+  :root { --ink: #21141c; --bg: #0d0a14; --gold: #ffd23a; }
+  html, body { margin: 0; height: 100%; background: var(--bg); overflow: hidden; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+  body { display: grid; place-items: center; font-family: system-ui, sans-serif; }
+  canvas#game { display: block; image-rendering: auto; }
+  #boot { position: fixed; inset: 0; display: grid; place-items: center; color: #ffe9b0; font: 600 20px system-ui, sans-serif; letter-spacing: .04em; }
+  #corner { position: fixed; top: max(8px, env(safe-area-inset-top)); right: max(8px, env(safe-area-inset-right)); display: flex; gap: 8px; z-index: 5; }
+  #corner button { width: 34px; height: 34px; border-radius: 50%; border: 3px solid var(--ink); background: rgba(255,250,240,.7); color: var(--ink); font: 700 16px system-ui; padding: 0; cursor: pointer; display: grid; place-items: center; }
+  #corner button.off::after { content: ''; position: absolute; width: 30px; height: 3px; background: #d33; transform: rotate(-45deg); }
+  #corner button { position: relative; }
+  #corner button[hidden] { display: none; }
+  /* the touch target: 44 px round each 34 px button (the 44 pt guideline, QA N9) -- a transparent disc that takes the tap;
+     the look and the corner's box (src/main.js cornerBox: #corner's own rect) unchanged */
+  #corner button::before { content: ''; position: absolute; inset: -8px; border-radius: 50%; }
+  /* every book: gone while a gamepad plays -- START pauses -- and back on a mouse or a touch (body.padui: src/main.js
+     App.padUi); Book Two (body.si) also keeps them inside a TV's 5% action-safe area */
+  #corner { transition: opacity .3s; }
+  body.padui #corner { opacity: 0; pointer-events: none; }
+  body.si #corner { top: max(5vh, env(safe-area-inset-top)); right: max(calc(5vw + 2px), env(safe-area-inset-right)); }
+  #fsBtn svg { width: 18px; height: 18px; display: block; }
+  #fsBtn .shrink, #fsBtn.on .grow { display: none; }
+  #fsBtn.on .shrink { display: block; }
+  .nocursor, .nocursor * { cursor: none !important; }
+  #fsTip { position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 9; max-width: min(88vw, 460px); padding: 18px 22px; border-radius: 16px; border: 4px solid var(--ink); background: #fff6e0; color: var(--ink); font: 600 17px/1.45 system-ui, sans-serif; text-align: center; box-shadow: 0 8px 0 rgba(0,0,0,.35); }
+  #fsTip .x { display: inline-block; margin-top: 12px; padding: 6px 22px; border-radius: 999px; border: 3px solid var(--ink); background: var(--gold); font-weight: 800; cursor: pointer; }
+  #touch { display: none; }
+  body.touch #touch { display: block; }
+  body.touch:not(.playing) #pads { display: none; }
+  body.story #mute, body.story #pauseBtn, body.story #fsBtn { opacity: 0.35; }
+  /* phones in landscape: canvas to the left so the buttons sit in the right-hand gutter */
+  @media (max-height: 500px) {
+    body.touch { place-items: center start; padding-left: env(safe-area-inset-left); }
+    body.touch #pads { transform: scale(.76); transform-origin: bottom right; right: max(6px, env(safe-area-inset-right)); bottom: max(6px, env(safe-area-inset-bottom)); }
+    body.touch #bD { right: 116px; bottom: 186px; }   /* (in the gutter, over SHOOT: the play area stays clear) */
+  }
+  #stickzone { position: fixed; left: 0; top: 0; width: 50%; height: 100%; z-index: 3; }
+  #stick { position: fixed; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; border: 3px solid rgba(255,255,255,.5); background: rgba(20,14,30,.25); display: none; z-index: 4; pointer-events: none; }
+  #stick.on { display: block; }
+  #knob { position: absolute; left: 50%; top: 50%; width: 54px; height: 54px; border-radius: 50%; background: rgba(255,240,210,.75); border: 3px solid var(--ink); transform: translate(-50%,-50%); }
+  #pads { position: fixed; right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); width: 266px; height: 190px; z-index: 4; }
+  #pads [data-act] { position: absolute; opacity: .75; border-radius: 50%; border: 4px solid var(--ink); display: grid; place-items: center; font: 400 18px Bangers, Impact, sans-serif; letter-spacing: .03em; color: var(--ink); box-shadow: 0 4px 0 rgba(0,0,0,.35); touch-action: none; }
+  #pads [data-act].down { transform: translateY(3px); box-shadow: 0 1px 0 rgba(0,0,0,.35); filter: brightness(1.15); opacity: 1; }   /* (idle .75: the arena shows through) */
+  #bA { width: 92px; height: 92px; right: 0; bottom: 0; background: #ff9a3a; }
+  #bJ { width: 74px; height: 74px; right: 106px; bottom: 6px; background: #8fd0ff; }
+  body[data-hint="attack"] #bA, body[data-hint="cmelee"] #bA, body[data-hint="special"] #bS { animation: pulse .7s ease-in-out infinite alternate; }
+  @keyframes pulse { from { transform: scale(1); } to { transform: scale(1.14); box-shadow: 0 0 0 6px rgba(255,226,120,.8); } }
+  @media (prefers-reduced-motion: reduce) { body[data-hint] #bA, body[data-hint] #bS, body[data-hint] #bF, body[data-hint] #bD { animation: none; } }
+  #bF { width: 62px; height: 62px; right: 112px; bottom: 100px; background: #b6e35a; }
+  body[data-hint="shoot"] #bF, body[data-hint="charge"] #bF { animation: pulse .7s ease-in-out infinite alternate; }
+  #bD { width: 64px; height: 64px; right: 200px; bottom: 8px; background: #c9a7ff; font-size: 16px; transition: opacity .15s; }
+  body.dodgecd #bD { opacity: .45; }
+  body[data-hint="dodge"] #bD { animation: pulse .7s ease-in-out infinite alternate; }
+  #bS { width: 70px; height: 70px; right: 20px; bottom: 108px; background: #ff5a3a; color: #fff6e0 !important; }
+</style>
+</head>
+<body>
+<div id="boot">Loading Dodongo's Quest...</div>
+<canvas id="game" width="960" height="540"></canvas>
+<div id="corner">
+  <button id="mute" title="Sound on/off (M)" aria-label="Sound on/off">&#9835;</button>
+  <button id="pauseBtn" title="Pause (Enter)" aria-label="Pause">II</button>
+  <button id="fsBtn" title="Full screen" aria-label="Full screen"><svg class="grow" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M2 7V2h5M11 2h5v5M16 11v5h-5M7 16H2v-5"/></svg><svg class="shrink" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M7 2v5H2M16 7h-5V2M11 16v-5h5M2 11h5v5"/></svg></button>
+</div>
+<div id="touch">
+  <div id="stickzone"></div>
+  <div id="stick"><div id="knob"></div></div>
+  <div id="pads">
+    <div id="bA" data-act="attack">ATTACK</div>
+    <div id="bJ" data-act="jump">JUMP</div>
+    <div id="bS" data-act="special">SUPER</div>
+    <div id="bF" data-act="shoot">SHOOT</div>
+    <div id="bD" data-act="dodge">DODGE</div>
+  </div>
+</div>
+<script>window.DQ_ATLAS_INDEX = {"ana_archmage_painted":["ana_archmage_painted_1x","ana_archmage_painted_2x","ana_archmage_painted_move_1x","ana_archmage_painted_move_2x","ana_archmage_painted_scene_1x","ana_archmage_painted_scene_2x"],"ana_painted":["ana_painted_1x","ana_painted_2x","ana_painted_move_1x","ana_painted_move_2x","ana_painted_scene_1x","ana_painted_scene_2x"],"ana_showcase":["ana_showcase_1x","ana_showcase_2x"],"armor_knight_axe_painted":["armor_knight_axe_painted_1x","armor_knight_axe_painted_2x"],"armor_knight_halberd_painted":["armor_knight_halberd_painted_1x","armor_knight_halberd_painted_2x"],"armor_knight_painted":["armor_knight_painted_1x","armor_knight_painted_2x"],"blunderbeard":["blunderbeard_0.75x","blunderbeard_1x","blunderbeard_2x"],"brute_frost_painted":["brute_frost_painted_0.75x","brute_frost_painted_1x","brute_frost_painted_2x"],"brute_jade_painted":["brute_jade_painted_1x","brute_jade_painted_2x"],"brute_magma_painted":["brute_magma_painted_1x"],"brute_painted":["brute_painted_1x","brute_painted_2x"],"cliff_bat_painted":["cliff_bat_painted_1x","cliff_bat_painted_2x"],"collar_imp_painted":["collar_imp_painted_1x","collar_imp_painted_2x"],"crab":["crab_1x","crab_2x"],"dodongo_dragon_painted":["dodongo_dragon_painted_1x","dodongo_dragon_painted_2x","dodongo_dragon_painted_level_0.75x","dodongo_dragon_painted_level_1x","dodongo_dragon_painted_level_2x","dodongo_dragon_painted_move_1x","dodongo_dragon_painted_move_2x","dodongo_dragon_painted_scene_1x","dodongo_dragon_painted_scene_2x"],"dodongo_painted":["dodongo_painted_1x","dodongo_painted_2x","dodongo_painted_move_1x","dodongo_painted_move_2x","dodongo_painted_scene_1x","dodongo_painted_scene_2x"],"dodongo_showcase":["dodongo_showcase_1x","dodongo_showcase_2x"],"dragonking_dread_painted":["dragonking_dread_painted_0.75x","dragonking_dread_painted_1x","dragonking_dread_painted_2x","dragonking_dread_painted_scene_0.75x","dragonking_dread_painted_scene_1x","dragonking_dread_painted_scene_2x"],"dragonking_painted":["dragonking_painted_0.75x","dragonking_painted_1x","dragonking_painted_scene_0.75x","dragonking_painted_scene_1x","dragonking_painted_scene_2x"],"dragonking_tiny_painted":["dragonking_tiny_painted_1x","dragonking_tiny_painted_2x","dragonking_tiny_painted_scene_1x","dragonking_tiny_painted_scene_2x"],"dragonqueen_painted":["dragonqueen_painted_0.75x","dragonqueen_painted_1x","dragonqueen_painted_2x"],"elder_tree":["elder_tree_0.75x","elder_tree_1x","elder_tree_2x"],"fear_shade":["fear_shade_1x","fear_shade_2x"],"fire_imp_painted":["fire_imp_painted_1x","fire_imp_painted_2x"],"fire_puppy":["fire_puppy_1x","fire_puppy_2x"],"grimscale_free_painted":["grimscale_free_painted_0.75x","grimscale_free_painted_1x","grimscale_free_painted_2x","grimscale_free_painted_scene_0.75x","grimscale_free_painted_scene_1x","grimscale_free_painted_scene_2x"],"grimscale_painted":["grimscale_painted_0.75x","grimscale_painted_1x","grimscale_painted_2x"],"guard_painted":["guard_painted_1x"],"ice_imp_painted":["ice_imp_painted_1x","ice_imp_painted_2x"],"ice_wyvern_painted":["ice_wyvern_painted_0.75x","ice_wyvern_painted_1x","ice_wyvern_painted_2x"],"king":["king_1x","king_2x"],"kobold_blue_painted":["kobold_blue_painted_1x","kobold_blue_painted_2x","kobold_blue_painted_scene_1x","kobold_blue_painted_scene_2x"],"kobold_bomber_painted":["kobold_bomber_painted_1x","kobold_bomber_painted_2x"],"kobold_frost_painted":["kobold_frost_painted_1x","kobold_frost_painted_2x"],"kobold_jade_painted":["kobold_jade_painted_1x","kobold_jade_painted_2x"],"kobold_miner_painted":["kobold_miner_painted_1x","kobold_miner_painted_2x"],"kobold_painted":["kobold_painted_1x","kobold_painted_scene_1x","kobold_painted_scene_2x"],"kobold_red_painted":["kobold_red_painted_1x","kobold_red_painted_2x"],"kobold_shaman_painted":["kobold_shaman_painted_1x"],"kraken_arm":["kraken_arm_1x","kraken_arm_2x"],"kraken_head":["kraken_head_0.75x","kraken_head_1x","kraken_head_2x"],"kraken_tentacle":["kraken_tentacle_1x","kraken_tentacle_2x"],"legend_dummy_painted":["legend_dummy_painted_1x","legend_dummy_painted_2x"],"leviathan":["leviathan_0.75x","leviathan_1x","leviathan_2x"],"leviathan_coil":["leviathan_coil_0.75x","leviathan_coil_1x","leviathan_coil_2x"],"magmaw_crystal_painted":["magmaw_crystal_painted_0.75x","magmaw_crystal_painted_1x","magmaw_crystal_painted_2x"],"magmaw_painted":["magmaw_painted_0.75x","magmaw_painted_1x","magmaw_painted_2x"],"malachar":["malachar_0.75x","malachar_1x","malachar_2x"],"malachar_puffer":["malachar_puffer_1x","malachar_puffer_2x"],"morvath_crow_painted":["morvath_crow_painted_1x","morvath_crow_painted_2x"],"morvath_nostaff_painted":["morvath_nostaff_painted_0.75x","morvath_nostaff_painted_1x","morvath_nostaff_painted_2x"],"morvath_painted":["morvath_painted_0.75x","morvath_painted_1x","morvath_painted_2x"],"morvath_staff_painted":["morvath_staff_painted_1x","morvath_staff_painted_2x"],"pq_parrot_painted":["pq_parrot_painted_1x","pq_parrot_painted_2x"],"rage_wolf_painted":["rage_wolf_painted_1x","rage_wolf_painted_2x"],"rock_imp_painted":["rock_imp_painted_1x","rock_imp_painted_2x"],"sad_cloud":["sad_cloud_1x","sad_cloud_2x"],"sailor_body":["sailor_body_1x","sailor_body_2x"],"sailor_body_stout":["sailor_body_stout_1x","sailor_body_stout_2x"],"sailor_hands_dark":["sailor_hands_dark_1x","sailor_hands_dark_2x"],"sailor_hands_light":["sailor_hands_light_1x","sailor_hands_light_2x"],"sailor_head_bald":["sailor_head_bald_1x","sailor_head_bald_2x"],"sailor_head_bald_thug":["sailor_head_bald_thug_1x","sailor_head_bald_thug_2x"],"sailor_head_burly":["sailor_head_burly_1x","sailor_head_burly_2x"],"sailor_head_burly_thug":["sailor_head_burly_thug_1x","sailor_head_burly_thug_2x"],"sailor_head_ginger":["sailor_head_ginger_1x","sailor_head_ginger_2x"],"sailor_head_ginger_thug":["sailor_head_ginger_thug_1x","sailor_head_ginger_thug_2x"],"sailor_head_patch":["sailor_head_patch_1x","sailor_head_patch_2x"],"sailor_head_patch_thug":["sailor_head_patch_thug_1x","sailor_head_patch_thug_2x"],"sailor_head_spiky":["sailor_head_spiky_1x","sailor_head_spiky_2x"],"sailor_head_spiky_thug":["sailor_head_spiky_thug_1x","sailor_head_spiky_thug_2x"],"sailor_prop_club":["sailor_prop_club_1x","sailor_prop_club_2x"],"sailor_prop_cutlass":["sailor_prop_cutlass_1x","sailor_prop_cutlass_2x"],"sailor_prop_net":["sailor_prop_net_1x","sailor_prop_net_2x"],"sailor_prop_rope":["sailor_prop_rope_1x","sailor_prop_rope_2x"],"sailor_thug_body":["sailor_thug_body_1x","sailor_thug_body_2x"],"sailor_thug_body_stout":["sailor_thug_body_stout_1x","sailor_thug_body_stout_2x"],"salamander_painted":["salamander_painted_1x","salamander_painted_2x"],"scarlet_painted":["scarlet_painted_1x","scarlet_painted_2x","scarlet_painted_move_1x","scarlet_painted_move_2x","scarlet_painted_scene_1x","scarlet_painted_scene_2x"],"scarlet_pirate_painted":["scarlet_pirate_painted_1x","scarlet_pirate_painted_2x","scarlet_pirate_painted_move_1x","scarlet_pirate_painted_move_2x","scarlet_pirate_painted_scene_1x","scarlet_pirate_painted_scene_2x"],"scarlet_showcase":["scarlet_showcase_1x","scarlet_showcase_2x"],"shadow_legend_painted":["shadow_legend_painted_1x","shadow_legend_painted_2x","shadow_legend_painted_move_1x","shadow_legend_painted_move_2x","shadow_legend_painted_scene_1x","shadow_legend_painted_scene_2x"],"shadow_painted":["shadow_painted_1x","shadow_painted_2x","shadow_painted_move_1x","shadow_painted_move_2x","shadow_painted_scene_1x","shadow_painted_scene_2x"],"shadow_showcase":["shadow_showcase_1x","shadow_showcase_2x"],"shadow_wolf_painted":["shadow_wolf_painted_1x","shadow_wolf_painted_2x","shadow_wolf_painted_scene_1x"],"sloth_beast":["sloth_beast_0.75x","sloth_beast_1x","sloth_beast_2x"],"sloth_slime":["sloth_slime_1x","sloth_slime_2x"],"snowman_painted":["snowman_painted_1x","snowman_painted_2x"],"stone_troll_arm_painted":["stone_troll_arm_painted_0.75x","stone_troll_arm_painted_1x","stone_troll_arm_painted_2x"],"stone_troll_painted":["stone_troll_painted_0.75x","stone_troll_painted_1x","stone_troll_painted_2x"],"storm_bat":["storm_bat_1x","storm_bat_2x"],"storm_crow_painted":["storm_crow_painted_1x","storm_crow_painted_2x"],"swamp_root":["swamp_root_1x"],"swamp_tree":["swamp_tree_1x","swamp_tree_2x"],"tempest_painted":["tempest_painted_0.75x","tempest_painted_1x","tempest_painted_scene_0.75x","tempest_painted_scene_1x","tempest_painted_scene_2x"],"whelp_painted":["whelp_painted_1x","whelp_painted_2x","whelp_painted_scene_1x","whelp_painted_scene_2x"],"whelp_storm_painted":["whelp_storm_painted_1x","whelp_storm_painted_2x"],"wolf_alpha_painted":["wolf_alpha_painted_0.75x","wolf_alpha_painted_1x","wolf_alpha_painted_2x"],"wyvern_alpha_painted":["wyvern_alpha_painted_0.75x","wyvern_alpha_painted_1x","wyvern_alpha_painted_2x"],"wyvern_painted":["wyvern_painted_1x","wyvern_painted_2x"],"wyvern_rider_painted":["wyvern_rider_painted_1x","wyvern_rider_painted_2x"]};</script>
+<script type="module" src="src/main.js"></script>
+<script type="module" src="src/fullscreen.js"></script>
+</body>
+</html>
