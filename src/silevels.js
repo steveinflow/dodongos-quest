@@ -29,7 +29,7 @@ export const SI_LEVELS = [
           [{ k: 'sailor', v: 'club', side: 'R', y: 60, face: 0 }, { k: 'sailor', v: 'club', side: 'R', y: 115, delay: 45, face: 1 }],
           [{ k: 'sailor', v: 'club', side: 'L', y: 85, face: 2 }, { k: 'sailor', v: 'club', side: 'R', y: 40, delay: 40, face: 3 }, { k: 'sailor', v: 'club', side: 'R', y: 120, delay: 95, face: 4 }],
         ] },
-      { cam: 1600, say: [['dod', 'A LASSO?! Hey, I\nam not a calf!']],
+      { cam: 1600, twist: { wave: 1, kind: 'golden', name: 'GOLDEN SAILOR!' }, say: [['dod', 'A LASSO?! Hey, I\nam not a calf!']],
         waves: [
           [{ k: 'sailor', v: 'rope', side: 'R', y: 70, face: 1 }, { k: 'sailor', v: 'club', side: 'L', y: 110, delay: 50, face: 0 }],
           [{ k: 'sailor', v: 'net', side: 'R', y: 90, face: 2 }, { k: 'sailor', v: 'club', side: 'L', y: 45, delay: 40, face: 3 }, { k: 'sailor', v: 'club', side: 'R', y: 120, delay: 90, face: 4 }],
@@ -128,7 +128,7 @@ export const SI_LEVELS = [
           [{ k: 'ragebeast', side: 'R', y: 60 }, { k: 'ragebeast', side: 'R', y: 112, delay: 70 }],
           [{ k: 'ragebeast', side: 'L', y: 85 }, { k: 'ragebeast', side: 'R', y: 45, delay: 60 }, { k: 'ragebeast', side: 'R', y: 120, delay: 130 }],
         ] },
-      { cam: 1500, say: [['ana', 'Lava! Watch the floor!']], tent: { kinds: ['spout'], every: [200, 280], max: 1 },
+      { cam: 1500, twist: { wave: 1, kind: 'tiny' }, say: [['ana', 'Lava! Watch the floor!']], tent: { kinds: ['spout'], every: [200, 280], max: 1 },
         waves: [
           [{ k: 'ragebeast', side: 'R', y: 70 }, { k: 'ragebeast', side: 'L', y: 105, delay: 60 }],
           [{ k: 'ragebeast', side: 'L', y: 55 }, { k: 'ragebeast', side: 'R', y: 100, delay: 50 }, { k: 'ragebeast', side: 'R', y: 75, delay: 120 }],
@@ -138,7 +138,7 @@ export const SI_LEVELS = [
           [{ k: 'ragebeast', side: 'L', y: 60 }, { k: 'ragebeast', side: 'R', y: 90, delay: 50 }, { k: 'ragebeast', side: 'R', y: 45, delay: 100 }],
           [{ k: 'ragebeast', side: 'R', y: 110 }, { k: 'ragebeast', side: 'L', y: 55, delay: 45 }, { k: 'ragebeast', side: 'L', y: 120, delay: 90 }, { k: 'ragebeast', side: 'R', y: 75, delay: 140 }],
         ] },
-      { cam: 3400, say: [['ana', 'The bridge is just\nahead. Stay CALM.']], tent: { kinds: ['spout'], every: [170, 240], max: 1 },
+      { cam: 3400, twist: { wave: 0, kind: 'giant' }, say: [['ana', 'The bridge is just\nahead. Stay CALM.']], tent: { kinds: ['spout'], every: [170, 240], max: 1 },
         waves: [
           [{ k: 'ragebeast', side: 'R', y: 60 }, { k: 'ragebeast', side: 'R', y: 105, delay: 50 }, { k: 'ragebeast', side: 'L', y: 85, delay: 100 }],
           [{ k: 'ragebeast', side: 'L', y: 50 }, { k: 'ragebeast', side: 'R', y: 115, delay: 40 }, { k: 'ragebeast', side: 'L', y: 100, delay: 90 }, { k: 'ragebeast', side: 'R', y: 70, delay: 130 }],
@@ -175,7 +175,7 @@ export const SI_LEVELS = [
           [{ k: 'swamptree', side: 'R', y: 70 }],
           [{ k: 'swamptree', side: 'R', y: 45 }, { k: 'sapling', side: 'L', y: 100, delay: 70 }],
         ] },
-      { cam: 1500, mist: { every: [420, 560], max: 1 }, say: [['ana', 'That little cloud...\nit makes me feel so SAD.']],
+      { cam: 1500, twist: { wave: 1, kind: 'golden', name: 'GOLDEN TREE!' }, mist: { every: [420, 560], max: 1 }, say: [['ana', 'That little cloud...\nit makes me feel so SAD.']],
         waves: [
           [{ k: 'swamptree', side: 'R', y: 60 }, { k: 'sapling', side: 'R', y: 110, delay: 60 }],
           [{ k: 'swamptree', side: 'L', y: 80 }, { k: 'swamptree', side: 'R', y: 45, delay: 80 }, { k: 'sapling', side: 'R', y: 120, delay: 130 }],
@@ -229,7 +229,7 @@ export const SI_LEVELS = [
           [{ k: 'slime', side: 'R', y: 60 }, { k: 'slime', side: 'L', y: 105, delay: 60 }],
           [{ k: 'slime', side: 'L', y: 55 }, { k: 'slime', side: 'R', y: 100, delay: 50 }, { k: 'slime', side: 'R', y: 75, delay: 120 }],
         ] },
-      { cam: 2500, say: [['ana', 'The fog is thicker here.\nDo not stop!']],
+      { cam: 2500, twist: { wave: 1, kind: 'stampede', count: 8 }, say: [['ana', 'The fog is thicker here.\nDo not stop!']],
         waves: [
           [{ k: 'slime', side: 'L', y: 60 }, { k: 'slime', side: 'R', y: 90, delay: 50 }, { k: 'slime', side: 'R', y: 45, delay: 100 }],
           [{ k: 'slime', side: 'R', y: 110 }, { k: 'slime', side: 'L', y: 55, delay: 45 }, { k: 'slime', side: 'L', y: 120, delay: 90 }, { k: 'slime', side: 'R', y: 75, delay: 140 }],

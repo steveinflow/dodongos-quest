@@ -34,7 +34,7 @@ export const MM_LEVELS = [
           [{ k: 'wolf', side: 'R', y: 60 }, { k: 'wolf', side: 'R', y: 115, delay: 50 }],
           [{ k: 'wolf', side: 'L', y: 80 }, { k: 'wolf', side: 'R', y: 40, delay: 40 }, { k: 'wolf', side: 'R', y: 120, delay: 90 }],
         ] },
-      { cam: 1650, say: [['dod', "Did that tree just...\nLOOK at me?"]],
+      { cam: 1650, twist: { wave: 1, kind: 'tiny' }, say: [['dod', "Did that tree just...\nLOOK at me?"]],
         waves: [
           [{ k: 'wolf', side: 'R', y: 50 }, { k: 'wolf', side: 'L', y: 110, delay: 30 }, { k: 'wolf', side: 'R', y: 90, delay: 80 }],
           [{ k: 'wolf', side: 'R', y: 30 }, { k: 'wolf', side: 'L', y: 70, delay: 30 }, { k: 'wolf', side: 'R', y: 120, delay: 60 }],
@@ -81,7 +81,7 @@ export const MM_LEVELS = [
           [{ k: 'bat', side: 'R', y: 50 }, { k: 'bat', side: 'L', y: 110, delay: 50 }, { k: 'imp', v: 'rock', side: 'R', y: 90, delay: 90 }],
           [{ k: 'imp', v: 'rock', side: 'R', y: 30 }, { k: 'imp', v: 'rock', side: 'L', y: 120, delay: 30 }, { k: 'bat', side: 'R', y: 80, delay: 80 }],
         ] },
-      { cam: 3200,
+      { cam: 3200, twist: { wave: 1, kind: 'sky' },
         waves: [
           [{ k: 'imp', v: 'rock', side: 'R', y: 40 }, { k: 'bat', side: 'L', y: 100, delay: 30 }, { k: 'imp', v: 'rock', side: 'R', y: 120, delay: 70 }, { k: 'bat', side: 'R', y: 60, delay: 120 }],
           [{ k: 'imp', v: 'rock', side: 'L', y: 70 }, { k: 'imp', v: 'rock', side: 'R', y: 30, delay: 30 }, { k: 'imp', v: 'rock', side: 'R', y: 110, delay: 60 }, { k: 'bat', side: 'L', y: 40, delay: 110 }],
@@ -119,7 +119,7 @@ export const MM_LEVELS = [
           [{ k: 'snowman', side: 'R', y: 50 }, { k: 'imp', v: 'ice', side: 'R', y: 90, delay: 50 }, { k: 'imp', v: 'ice', side: 'L', y: 30, delay: 110 }],
           [{ k: 'snowman', side: 'L', y: 80 }, { k: 'imp', v: 'ice', side: 'R', y: 40, delay: 40 }, { k: 'snowman', side: 'R', y: 90, delay: 90 }],
         ] },
-      { cam: 1700,
+      { cam: 1700, twist: { wave: 1, kind: 'giant' },
         waves: [
           [{ k: 'imp', v: 'ice', side: 'R', y: 30 }, { k: 'imp', v: 'ice', side: 'L', y: 90, delay: 30 }, { k: 'snowman', side: 'R', y: 60, delay: 70 }],
           [{ k: 'snowman', side: 'R', y: 40 }, { k: 'snowman', side: 'L', y: 90, delay: 40 }, { k: 'imp', v: 'ice', side: 'R', y: 70, delay: 100 }],
@@ -161,7 +161,7 @@ export const MM_LEVELS = [
           [{ k: 'knight', v: 'sword', side: 'R', y: 60 }, { k: 'knight', v: 'sword', side: 'L', y: 110, delay: 60 }],
           [{ k: 'knight', v: 'axe', side: 'R', y: 40 }, { k: 'knight', v: 'sword', side: 'R', y: 120, delay: 50 }, { k: 'knight', v: 'sword', side: 'L', y: 80, delay: 110 }],
         ] },
-      { cam: 1700,
+      { cam: 1700, twist: { wave: 1, kind: 'golden', name: 'GOLDEN KNIGHT!' },
         waves: [
           [{ k: 'knight', v: 'halberd', side: 'R', y: 60 }, { k: 'knight', v: 'sword', side: 'L', y: 100, delay: 40 }],   // (polish: two, not three)
           [{ k: 'knight', v: 'axe', side: 'L', y: 40 }, { k: 'knight', v: 'axe', side: 'R', y: 110, delay: 40 }, { k: 'knight', v: 'sword', side: 'R', y: 70, delay: 100 }],

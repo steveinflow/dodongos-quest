@@ -22,10 +22,16 @@ export function drawTinted(ctx, sx, sy, flash, draw, wash) {
   tctx.setTransform(1, 0, 0, 1, 0, 0);
   tctx.clearRect(0, 0, toff.width, toff.height);
   tctx.setTransform(ds, 0, 0, ds, TF_X * ds, TF_Y * ds);
+  // (a wash may be { filter, fill }: a canvas filter the drawing goes through -- the arenas' GOLDEN foe, src/twists.js --
+  //  and an optional fill over it; where the browser has no canvas filter, the fill alone)
+  const F = typeof wash === 'object' ? wash : null;
+  if (F?.filter && 'filter' in tctx) tctx.filter = F.filter;
   draw(tctx);
+  if (F?.filter && 'filter' in tctx) tctx.filter = 'none';
   tctx.setTransform(1, 0, 0, 1, 0, 0);
   tctx.globalCompositeOperation = 'source-atop';
-  tctx.fillStyle = wash; tctx.fillRect(0, 0, toff.width, toff.height);
+  const fill = F ? (F.filter && 'filter' in tctx ? F.fill : F.fallback) : wash;
+  if (fill) { tctx.fillStyle = fill; tctx.fillRect(0, 0, toff.width, toff.height); }
   if (flash > 0.02) { tctx.fillStyle = `rgba(255,252,240,${Math.min(1, flash)})`; tctx.fillRect(0, 0, toff.width, toff.height); }
   tctx.globalCompositeOperation = 'source-over';
   ctx.drawImage(toff, sx - TF_X, sy - TF_Y, TB_W, TB_H);

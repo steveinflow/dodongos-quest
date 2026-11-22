@@ -29,7 +29,7 @@ export const DQ_LEVELS = [
           [{ k: 'whelp', side: 'R', y: 70 }, { k: 'kobold', side: 'L', y: 40, delay: 30 }, { k: 'kobold', side: 'R', y: 120, delay: 60 }],
           [{ k: 'whelp', side: 'L', y: 110 }, { k: 'whelp', side: 'R', y: 40, delay: 50 }, { k: 'kobold', side: 'R', y: 80, delay: 120, v: 'blue' }],
         ] },
-      { cam: 3150, brute: true,
+      { cam: 3150, twist: { wave: 1, kind: 'tiny' }, brute: true,
         waves: [
           [{ k: 'brute', side: 'R', y: 80, name: 'BIG GRONK' }, { k: 'kobold', side: 'L', y: 40, delay: 90 }],
           [{ k: 'kobold', side: 'R', y: 40, v: 'blue' }, { k: 'kobold', side: 'L', y: 120, v: 'blue', delay: 30 }, { k: 'kobold', side: 'R', y: 90, v: 'red', delay: 80 }],
@@ -74,7 +74,7 @@ export const DQ_LEVELS = [
           [{ k: 'kobold', side: 'R', y: 50, v: 'miner' }, { k: 'kobold', side: 'R', y: 120, v: 'miner', delay: 40 }, { k: 'kobold', side: 'L', y: 85, v: 'miner', delay: 100 }],
           [{ k: 'kobold', side: 'R', y: 40, v: 'bomber' }, { k: 'kobold', side: 'L', y: 110, v: 'miner', delay: 30 }, { k: 'kobold', side: 'R', y: 90, v: 'miner', delay: 90 }],
         ] },
-      { cam: 2000, say: [['dod', 'Lava lizards!\nThey look... spicy.']],
+      { cam: 2000, twist: { wave: 1, kind: 'golden', name: 'GOLDEN BOMBER!' }, say: [['dod', 'Lava lizards!\nThey look... spicy.']],
         waves: [
           [{ k: 'salamander', side: 'R', y: 60 }, { k: 'salamander', side: 'L', y: 110, delay: 50 }, { k: 'kobold', side: 'R', y: 90, v: 'miner', delay: 90 }],
           [{ k: 'kobold', side: 'R', y: 30, v: 'bomber' }, { k: 'kobold', side: 'L', y: 120, v: 'bomber', delay: 40 }, { k: 'salamander', side: 'R', y: 80, delay: 90 }],
@@ -135,7 +135,7 @@ export const DQ_LEVELS = [
           [{ k: 'brute', side: 'R', y: 80, name: 'THUNDERGUT' }, { k: 'whelp', side: 'L', y: 40, v: 'storm', delay: 80 }],
           [{ k: 'wyvern', side: 'R', y: 50 }, { k: 'whelp', side: 'L', y: 110, v: 'storm', delay: 40 }, { k: 'kobold', side: 'R', y: 120, v: 'red', delay: 100 }],
         ] },
-      { cam: 4700,
+      { cam: 4700, twist: { wave: 0, kind: 'sky' },
         waves: [
           [{ k: 'kobold', side: 'R', y: 40, v: 'red' }, { k: 'kobold', side: 'L', y: 120, v: 'blue', delay: 30 }, { k: 'wyvern', side: 'R', y: 90, delay: 70 }, { k: 'whelp', side: 'L', y: 60, v: 'storm', delay: 120 }],
           [{ k: 'brute', side: 'R', y: 70, name: 'GALEBELLY' }, { k: 'wyvern', side: 'L', y: 30, delay: 60 }, { k: 'kobold', side: 'R', y: 120, v: 'bomber', delay: 120 }],
@@ -174,7 +174,7 @@ export const DQ_LEVELS = [
           [{ k: 'guard', side: 'R', y: 70 }, { k: 'kobold', side: 'L', y: 120, v: 'red', delay: 40 }, { k: 'kobold', side: 'R', y: 40, delay: 90 }],
           [{ k: 'kobold', side: 'R', y: 50, v: 'shaman' }, { k: 'kobold', side: 'L', y: 110, v: 'blue', delay: 30 }, { k: 'kobold', side: 'R', y: 100, v: 'red', delay: 90 }],
         ] },
-      { cam: 1900,
+      { cam: 1900, twist: { wave: 1, kind: 'stampede', foe: { k: 'kobold', v: 'red' } },
         waves: [
           [{ k: 'kobold', side: 'R', y: 40, v: 'shaman' }, { k: 'guard', side: 'L', y: 100, delay: 40 }, { k: 'kobold', side: 'R', y: 120, v: 'red', delay: 90 }],
           [{ k: 'whelp', side: 'R', y: 60 }, { k: 'whelp', side: 'L', y: 110, delay: 30 }, { k: 'kobold', side: 'R', y: 90, v: 'shaman', delay: 90 }],

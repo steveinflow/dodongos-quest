@@ -65,7 +65,8 @@ export class ShadowWolf extends Enemy {
       g.mm?.hint('mmwolf', 'Shadow wolves come back! || Finish them with LIGHT: magic, fire, a charged strike or a super!');
       // (the first wolf to re-form: the book's light lesson, once a run -- docs/MM_SCRIPT.md; else, the first scatter
       //  without it: "Did I get one?! I'm not LOOKING!")
-      if (!g.mm?.story('mm_wolves') && !g.flags.mm_gotOne) { g.flags.mm_gotOne = true; g.mm?.line('gotOne'); }
+      //  (2026-11-22: the story waits for the wolf pack's gate now -- no comic page in the middle of a fight)
+      if (!g.flags.mm_gotOne) { g.flags.mm_gotOne = true; g.mm?.line('gotOne'); }
       return;
     }
     this.alive = false; this.set('fade');

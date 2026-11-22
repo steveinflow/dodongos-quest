@@ -1195,6 +1195,27 @@ export const CUTSCENES = {
 // Book Two's cutscenes (src/sistory.js): the same shape, the same rules
 Object.assign(CUTSCENES, SI_CUTSCENES);
 
+// The 2026-11-22 refresh: fewer comic pages between the fighting.  Kept: the pages that introduce a boss (the boss
+// gates, Book 3's Stormspire and Ember Throne openers, Morvath's dragon turn), each book's opening and its ending
+// (everything after the last boss).  Every other story below is taken out of the game; each place that plays one
+// already goes straight on when its story isn't there.  To bring one back, take it off this list.  (make_dist reads
+// this file too, so the plates of the stories cut here don't ship.)
+export const STORY_CUT = [
+  // Book 3, Dodongo's Quest: the mines' opener and the three secret stages' Star Shard pages (the shard's own
+  // "STAR SHARD n/3!" still pops up in play: World's shard pickup)
+  'before_mines', 'secret_frozen', 'secret_crystal', 'secret_eyrie',
+  // Book 1, Mystic Mountain: the stage openers and closers before the summit (mm_wolves stays: it is part of the wolf
+  // pack's gate, and src/mmfoes.js no longer plays it mid-stage)
+  'mm_forest_intro', 'mm_forest_end', 'mm_bridge_intro', 'mm_bridge_end', 'mm_cliffs_intro', 'mm_cliffs_end',
+  'mm_hall_intro', 'mm_gem_cut', 'mm_summit_intro',
+  // Book 2, Skull Island: the stage openers and closers, the letter mid-stage, the map's briefing, the Sun Key, the
+  // campfire and the palace door
+  'si_gull_night', 'si_letter', 'si_gull_end', 'si_kraken_a', 'si_kraken_end', 'si_map', 'si_map_mirror', 'si_map_brief',
+  'si_cave_a', 'si_cave_end', 'si_swamp_a', 'si_swamp_end', 'si_cell_a', 'si_cell_end', 'si_fuse', 'si_campfire',
+  'si_palace_door',
+];
+for (const id of STORY_CUT) delete CUTSCENES[id];
+
 // (docs/SECRETS_SCRIPT.md) shown under the ending's last page when meta.shards.size < 3 or meta.dragons.size < 8
 export const QUEEN_TEASER = {
   line: 'Star Shards {s}/3 - Baby dragons {d}/8: the Queen still sleeps...',

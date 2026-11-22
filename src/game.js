@@ -19,7 +19,8 @@ import { setSilhouette } from './render.js';
 import { drawHeartstone, heartNotches } from './heartstone.js';
 import { mmBegin } from './mmworld.js';
 import { siBegin } from './siworld.js';
-import * as SIFX from './sifx.js';   // (Skull Island's effects and ambient life: L.si only)
+import * as SIFX from './sifx.js';
+import { twistWave, applyTwist, twistLoot, twistBonus } from './twists.js';   // (the arenas' surprise waves: the 2026-11-22 refresh)   // (Skull Island's effects and ambient life: L.si only)
 
 const Q = new URLSearchParams(location.search);
 export const DEBUG = Q.has('debug');
@@ -248,10 +249,11 @@ export class World {
     e.facing = spec.side === 'L' ? 1 : -1;
     // co-op: enemies are tougher with more heroes (COOP_HP / COOP_BOSS)
     if (this.livePlayers.length > 1) { e.hp = e.maxHp = Math.round(e.maxHp * coopK(this.livePlayers.length, e.boss)); }
+    if (spec.tw) applyTwist(this, e, spec);
     this.actors.push(e);
     return e;
   }
-  spawnPickup(kind, x, y) { this.actors.push(new Pickup(this, kind, x, y)); }
+  spawnPickup(kind, x, y) { const pk = new Pickup(this, kind, x, y); this.actors.push(pk); return pk; }
   collect(pk, p) {
     const P = PICKUPS[pk.kind];
     pk.gone = true;
@@ -1059,6 +1061,7 @@ export class World {
     for (let i = this.pending.length - 1; i >= 0; i--) {
       if (this.frame >= this.pending[i].at) { this.spawn(this.pending[i].spec); this.pending.splice(i, 1); }
     }
+    if (this.twistOn !== undefined) twistLoot(this);
     if (!def) return;
     if (!this.fighting && this.camX >= def.cam - 0.5) {
       this.fighting = true; this.waveIdx = 0; this.goT = 0;
@@ -1075,6 +1078,7 @@ export class World {
         if (this.waveGap === undefined) this.waveGap = 40;
         if (--this.waveGap <= 0) {
           this.waveGap = undefined;
+          if (this.twistOn) twistBonus(this);
           if (this.waveIdx < def.waves.length - 1) { this.waveIdx++; this.startWave(); }
           else { this.fighting = false; this.arenaIdx++; this.goT = 200; this.tokens = 0; }
         }
@@ -1083,7 +1087,8 @@ export class World {
   }
   startWave() {
     const def = this.L.arenas[this.arenaIdx];
-    for (const s of def.waves[this.waveIdx]) this.pending.push({ spec: s, at: this.frame + (s.delay || 0) });
+    const specs = def.twist && def.twist.wave === this.waveIdx ? twistWave(this, def, def.waves[this.waveIdx]) : def.waves[this.waveIdx];
+    for (const s of specs) this.pending.push({ spec: s, at: this.frame + (s.delay || 0) });
   }
 
   /** a waystone was touched: checkpoint + save */
